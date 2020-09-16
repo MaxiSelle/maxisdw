@@ -1,0 +1,48 @@
+.itemlist {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  .item {
+    padding: 10px;
+
+    .preview:hover .image0 {
+      display: none;
+
+    }
+    .preview:hover .image1 {
+      display: block;
+    }
+    .image0 {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      border-radius: 20px;
+    }
+    .image1 {
+      width: 320px;
+      height: 320px;
+      object-fit: cover;
+      display: none;
+      border-radius: 20px;
+    }
+    .name {
+      font-size: 15pt;
+      margin-top: 10px;
+      font: "Roboto";
+      text-align: center;
+    }
+  }
+  .item:hover {
+    background-color: #f1f1f1;
+    text-decoration: underline;
+    color: rgb(138, 138, 138);
+  }
+}
+.noItems{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
+}

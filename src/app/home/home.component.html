@@ -1,0 +1,21 @@
+<ng-container *ngIf="items!=null">
+  <div class="itemlist" *ngIf="items.length>0; else noItems">
+    <div class="item" (click)="itemClicked(item.clothingItemId)" *ngFor="let item of items">
+      <div class="preview">
+        <img [src]="item.pictures[0].data" class="image0">
+        <img [src]="item.pictures[1].data" class="image1">
+      </div>
+      <div class="name">
+        {{item.name}}
+      </div>
+  </div>
+  </div>
+  <ng-template #noItems>
+    <div class="noItems">
+      There are no items in this category
+    </div>
+  </ng-template>
+</ng-container>
+
+
+

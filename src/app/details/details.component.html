@@ -1,0 +1,27 @@
+<div class="gridcontainer" *ngIf="item!=null">
+  <div class="nav">
+    lelek
+  </div>
+<div class="images">
+  <swiper class="swiper" [config]="conf1">
+    <div *ngFor="let photo of item.pictures" class ="swiper-slide">
+      <img [src]="photo.data" class="image">
+    </div>
+  </swiper>
+</div>
+<div class="allimages">
+  hurensohn
+</div>
+<div class="text">
+  <div class="name">
+    {{item.name}}
+  </div>
+  <div class="brand">
+    <a href="#" class="brandlink">{{item.brand}}</a>
+  </div>
+</div>
+</div>
+<div class="other">
+  other
+</div>
+

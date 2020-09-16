@@ -1,0 +1,32 @@
+
+.searchfield{
+  margin-right: 20px;
+}
+.toolbar{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.left{
+  display:flex;
+  flex-direction: row;
+}
+.ButtonsearchByDepartment{
+
+  text-align: left;
+}
+
+.DepartmentExPanel{
+  box-shadow: none;
+
+}
+
+.DepartmentExPanelHeader{
+  padding: 0 16px;
+}
+
+
+.sidenav{
+  height: 100%;
+}

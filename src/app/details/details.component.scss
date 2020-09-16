@@ -1,0 +1,85 @@
+.swiper {
+  display: block;
+  margin-left: 20%;
+  margin-top: 5%;
+  height: 400px;
+  width: 400px;
+  .swiper-slide {
+    /* Center slide text vertically */
+    //display: -webkit-box;
+    //display: -ms-flexbox;
+    //display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  .image {
+    height: 400px;
+    width: 400px;
+  }
+}
+
+.name {
+  font-size: 14pt;
+  font-family: Roboto;
+}
+.brand {
+  font-size: 14pt;
+  font-family: monospace;
+  .brandlink {
+    color: black;
+  }
+  .brandlink:hover {
+    color: rgb(138, 138, 138);
+  }
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .aside {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.gridcontainer {
+  display:grid;
+  grid-template-areas:"nav nav"
+                      "image text"
+                      "image text"
+                      "allimages ."
+                      "other other";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+
+}
+.images{
+  grid-area: image;
+
+}
+.text{
+  grid-area: text;
+  place-self: center;
+
+}
+.other{
+  grid-area: other;
+  background-color: green;
+}
+.allimages{
+  grid-area: allimages;
+  justify-self: center;
+}
+.nav{
+  background-color: grey;
+  grid-area: nav;
+}
