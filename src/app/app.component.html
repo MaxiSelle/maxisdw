@@ -1,4 +1,4 @@
-<mat-sidenav-container class="sidenav">
+<mat-sidenav-container class="sidenav" *ngIf="isLoggedIn$ | async as isLoggedIn; else loggedout">
   <mat-sidenav
     #sidenav
     fxLayout="column"
@@ -26,6 +26,9 @@
   <mat-list-item [routerLink]="'/addItem'">
     <a [routerLink]="'/addItem'">Add</a>
   </mat-list-item>
+  <mat-list-item (click)="logoutClick()">
+    <p>Logout</p>
+  </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content fxFlexFill>
@@ -45,8 +48,17 @@
         </mat-form-field>
       </div>
     </mat-toolbar>
+
     <router-outlet>
 
     </router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<ng-template #loggedout>
+  <router-outlet>
+
+  </router-outlet>
+</ng-template>
+
+
+

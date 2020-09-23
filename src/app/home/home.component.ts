@@ -1,3 +1,4 @@
+import { AuthService } from './../services/auth.service';
 import { ItemsService, IItem } from './../services/items.service';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd,NavigationStart } from '@angular/router';
@@ -9,7 +10,7 @@ import { Router, ActivatedRoute, NavigationEnd,NavigationStart } from '@angular/
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private itemsservice: ItemsService, private router: Router, private activatedRoute: ActivatedRoute) { }
+  constructor(private itemsservice: ItemsService, private router: Router, private activatedRoute: ActivatedRoute, public AuthService:AuthService) { }
 
   public items: IItem[]
 

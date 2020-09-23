@@ -1,3 +1,4 @@
+import { LoginGuard } from './guards/login.guard';
 import { AddItemComponent } from './add-item/add-item.component';
 
 import { DetailsComponent } from './details/details.component';
@@ -22,7 +23,8 @@ const routes: Routes = [
   },
   {
     path: "home",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate:[LoginGuard]
   },
   {
     path: "department/:item",
@@ -36,7 +38,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {
  }
