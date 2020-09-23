@@ -1,9 +1,13 @@
+$image-height:744px;
+$image-width:400px;
+
+
 .swiper {
   display: block;
   margin-left: 20%;
   margin-top: 5%;
-  height: 400px;
-  width: 400px;
+  height: $image-height;
+  width: $image-width;
   .swiper-slide {
     /* Center slide text vertically */
     //display: -webkit-box;
@@ -20,8 +24,8 @@
     align-items: center;
   }
   .image {
-    height: 400px;
-    width: 400px;
+    height: $image-height;
+    width: $image-width;
   }
 }
 
