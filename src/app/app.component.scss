@@ -2,11 +2,21 @@
 .searchfield{
   margin-right: 20px;
 }
+.searchfield:hover{
+  cursor: pointer;
+}
 .toolbar{
   display:flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%;
+
+  .title:hover{
+    cursor: pointer;
+  }
+  .title:focus{
+    outline: none;
+  }
 }
 .left{
   display:flex;
@@ -29,4 +39,7 @@
 
 .sidenav{
   height: 100%;
+}
+.title{
+  margin-top: 3px;
 }

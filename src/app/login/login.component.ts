@@ -15,8 +15,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  loginClick():void{
-    this.AuthService.login(this.password);
+  async loginClick():Promise<void>{
+    await this.AuthService.login(this.password);
+
+    if(this.AuthService.isLoggedInbool)
     this.router.navigateByUrl("/home");
   }
 

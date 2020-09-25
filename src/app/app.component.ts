@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
 
 }
 
+  searchtext="";
   title = "maxisdw";
   isLoggedIn$: Observable<boolean>;
 
@@ -32,6 +33,10 @@ export class AppComponent implements OnInit {
   public logoutClick():void{
     this.AuthService.logout();
     this.router.navigateByUrl("/login");
+  }
+
+  public SearchClick():void{
+    this.router.navigateByUrl("/department/Tee");
   }
 
 }

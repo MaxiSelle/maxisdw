@@ -19,7 +19,8 @@ const routes: Routes = [
   },
   {
     path: "details/:id",
-    component:DetailsComponent
+    component:DetailsComponent,
+    canActivate:[LoginGuard]
   },
   {
     path: "home",
@@ -28,11 +29,13 @@ const routes: Routes = [
   },
   {
     path: "department/:item",
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate:[LoginGuard]
   },
   {
     path: "addItem",
-    component: AddItemComponent
+    component: AddItemComponent,
+    canActivate:[LoginGuard]
   },
 ];
 
