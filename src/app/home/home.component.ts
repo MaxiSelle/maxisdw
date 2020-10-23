@@ -15,12 +15,12 @@ export class HomeComponent implements OnInit {
   public items: IItem[]
 
   ngOnInit(): void {
-
+    this.getItems();
        this.router.events.subscribe((e: any) => {
        if (e instanceof NavigationEnd)
          this.getItems();
       })
-      this.getItems();
+ 
   }
 
   public itemClicked(id: number): void {

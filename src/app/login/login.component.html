@@ -1,9 +1,13 @@
-<form class="loginForm">
+<form class="loginForm" ng-submit="login()">
   <mat-form-field class="loginFormField" floatLabel="never">
     <mat-label>Password</mat-label>
     <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" >
   </mat-form-field>
 
-  <button mat-raised-button color="primary" (click)="loginClick()">Login</button>
+  <button mat-raised-button color="primary" (click)="login()">Login</button>
 
 </form>
+<div class=gifcontainer>
+  <img src="./assets/images/wonderland.gif">
+  <div class="drip">Respect the Drip</div>
+</div>

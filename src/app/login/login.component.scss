@@ -4,10 +4,30 @@ button {
 
 .loginForm{
   display: flex;
-  flex-direction: row;
   justify-content:center;
   align-items: center;
 
   padding-top: 20px;
+
+}
+
+.drip{
+  position: absolute;
+
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  font-family: "dripfont";
+  font-size: 25pt;
+  color: #0dff00;
+}
+
+.gifcontainer{
+  margin-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
 }
