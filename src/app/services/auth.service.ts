@@ -28,4 +28,10 @@ export class AuthService {
   get isLoggedInbool(){
     return this.LoggedIn.value;
   }
+
+
+
+  public async CreateUser(name:string,password:string){
+    this.httpclient.post<boolean>("https://localhost:44354/api/Authentication/Create",{'password':password,'username':name}).toPromise();
+  }
 }

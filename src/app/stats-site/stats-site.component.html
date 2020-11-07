@@ -1,0 +1,15 @@
+<div class = "gridcontainer" *ngIf="loadrdy">
+  <div class="chartwrapper" *ngIf="loadrdy">
+    <canvas baseChart 
+    [data]="doughnutChartData"
+    [labels]="doughnutChartLabels"
+    [chartType]="doughnutChartType"
+    [colors]="chartColors"
+    >
+  </canvas>
+</div>
+<div class="itemcounts" *ngFor="let text of itemcounttexts">
+  <div>{{text}}
+  </div>
+</div>
+</div>

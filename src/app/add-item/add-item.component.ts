@@ -2,6 +2,7 @@ import { ItemsService, IItem,IPicture } from './../services/items.service';
 import { Tags } from './../classes/Tags';
 import { Component, OnInit } from '@angular/core';
 import { IcuPlaceholder } from '@angular/compiler/src/i18n/i18n_ast';
+import { trimTrailingNulls } from '@angular/compiler/src/render3/view/util';
 
 @Component({
   selector: 'app-add-item',
@@ -63,7 +64,7 @@ export class AddItemComponent implements OnInit {
   }
 
   onUpload() {
-    var itemToUpload:IItem={brand:this.brand,color:this.color,name:this.name,tag:Tags[this.selectedtag]};
+    var itemToUpload:IItem={brand:this.brand,color:this.color,name:this.name,tag:Tags[this.selectedtag],size:this.size};
     var picturestToUpload:IPicture[]= new Array();
 
     this.selectedFiles.forEach(file => {

@@ -6,6 +6,8 @@ import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { StatsSiteComponent } from './stats-site/stats-site.component';
 
 const routes: Routes = [
   {
@@ -36,6 +38,14 @@ const routes: Routes = [
     path: "addItem",
     component: AddItemComponent,
     canActivate:[LoginGuard]
+  },
+  {
+    path:"CreateUser",
+    component:CreateUserComponent,
+  },
+  {
+    path:"Stats",
+    component:StatsSiteComponent,
   },
 ];
 

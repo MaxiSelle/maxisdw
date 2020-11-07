@@ -24,6 +24,9 @@ import { AddItemComponent } from './add-item/add-item.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatSelectModule} from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { StatsSiteComponent } from './stats-site/stats-site.component';
+import { ChartsModule } from 'ng2-charts';
 
 
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -39,6 +42,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     HomeComponent,
     DetailsComponent,
     AddItemComponent,
+    CreateUserComponent,
+    StatsSiteComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +61,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     MatFormFieldModule,
     MatSelectModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ChartsModule,
   ],
   providers: [
     {
