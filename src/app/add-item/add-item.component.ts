@@ -57,7 +57,6 @@ export class AddItemComponent implements OnInit {
         this.selectedFiles.push(event.target.result as string);
       }
 
-      console.log(this.selectedFiles);
       reader.readAsDataURL(images[i]);
     }
 

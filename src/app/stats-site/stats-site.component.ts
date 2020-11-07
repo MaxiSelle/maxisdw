@@ -3,8 +3,8 @@ import { ChartType } from 'chart.js';
 import { MultiDataSet, Label } from 'ng2-charts';
 import { Observable } from 'rxjs';
 import { ItemsService } from '../services/items.service';
-import { from } from 'rxjs';
 import { StatData } from '../classes/Utilities';
+import { count } from 'rxjs/operators';
 
 @Component({
   selector: 'app-stats-site',
@@ -24,11 +24,10 @@ export class StatsSiteComponent implements OnInit {
     });
     this.doughnutChartLabels=this.labels;
     this.doughnutChartData=[this.counts];
-    console.log(this.itemcounttexts);
     this.loadrdy=true;
    }
 
-   itemcounttexts:string[]=[];
+  itemcounttexts:string[]=[];
 
 
   statdata$ : Observable<StatData[]>;
